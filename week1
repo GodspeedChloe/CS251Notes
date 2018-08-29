@@ -1,0 +1,47 @@
+Week 1 notes
+
+
+Computer architecture review
+
+* I/O
+	Mouse + keyboard
+	files (discs)
+	Network
+	Monitor
+	Cameras
+	Internet of Things!
+* Memory (RAM)
+	Data
+	Code
+* CPU Core 1
+	Instruction Unit
+	Functional Units
+	Registers
+* CPU Core 2
+	Instruction Unit
+	Functional Units
+	Registers
+* CPU Core N
+	Instruction Unit
+	Functional Units
+	Registers
+
+Multiple cores required because core speeds have hit limit due to heat
+I/O devices communicate to CPU with an Interrupt
+	- This is so that the CPU can do stuff in the meantime
+
+
+EXAMPLE
+User Level: Firefox and MP3
+Kernel Level: Interrupt handler, trap handler
+1. Mouse click sends interrupt to interrupt handler
+2. Handler returns interrupt to Firefox
+3. Firefox executes then sends trap to trap handler
+4. Trap handler returns to MP3
+
+
+Software vs Hardware
+
+Process:	threads		variables, lists, objects	FILE, Window, Sockets
+--------------------------------------------------------------------------------------
+Hardware:	cores		memory	 			I/O
