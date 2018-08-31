@@ -45,3 +45,68 @@ Software vs Hardware
 Process:	threads		variables, lists, objects	FILE, Window, Sockets
 --------------------------------------------------------------------------------------
 Hardware:	cores		memory	 			I/O
+
+
+
+Processes
+	has abstraction of memory (addresses which are #'s)
+		cells/words also known as the Address Space
+		has code, data
+	has abstractions of core(s)
+		thread 0.....thread n
+		thread 0 has a bunch of registers, thread 1 has a bunch, etc
+			register program counter holds an address
+			register stack pointer points to stack
+			other registers are used in the computation
+		thread 1 gets its own stack region
+	OS has it's own special memory to put threads into during interrupts
+		* Context Switch: when an interrupt happens and OS switches threads
+			These can happen at any time, can't control when they happen
+			Profound implications for how we design multithreaded software
+
+Threads
+	after created thread, goes into a "READY" state
+	OS has a queue/some kind of data structure of threads in "READY" state but not running
+	at some point, created thread is in "RUNNING" state
+		this OS algorithmic sequence from "READY" to "RUNNING" is the schedule/scheduler
+	maybe another interrupt happens, OS decides some other core should be running, thread
+		goes back to "READY" state and queue
+		deschedule/descheduler
+	when thread no longer needs to run , but might need to (i.e. waiting for mouse click),
+		we call that the "BLOCKED" state which is born through a block
+		Thread synchronization, thread sleeping, key presses, network response waiting, disk access
+		unblock thread when it's supposed to be "READY"
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
