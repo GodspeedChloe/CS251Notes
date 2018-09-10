@@ -1,0 +1,60 @@
+Chloe Jackson
+Week 3
+
+EBNF Lists
+
+<blah> ::= <FOO> TOO <goo>
+gives us
+Blah(Token foo, Goo goo)
+
+<blah> **= <FOO> TOO <goo>
+gives us
+Blah(List<Token> fooList, List<Goo> gooList)
+
+CHANGING SEMANTICS
+
+Lon
+%%%
+
+
+	// toString semantics
+	public String toString() {
+		String ret = "( ";
+		for (Token tok: nums.numList) {
+			ret += tok + " ";
+		}
+		return return "something really stupid";
+	}
+%%%
+
+
+
+you could also insert other code
+
+Lon
+%%%
+	public String toString() {
+		int minSoFar = Integer.parseInt(num.toString());
+		int m = nums.min(minSoFar); // get the overall minimum
+        	return "minimum value = " + m;
+    	}
+%%%
+
+Nums
+%%%
+	public abstract int min(int minSoFar);
+%%%
+
+NumsNode
+%%%
+	public int min(int minSoFar) {
+		
+
+%%%
+
+NumsNull
+%%%
+	public int min(int minSoFar) {
+	
+	}
+%%%
